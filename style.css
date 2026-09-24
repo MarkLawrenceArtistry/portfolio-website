@@ -446,3 +446,234 @@ footer {
         font-size: 3rem;
     }
 }
+
+/* =========================================
+   TERMS & CONDITIONS PAGE STYLES
+   ========================================= */
+
+.page-header {
+    background-color: var(--secondary-accent-color);
+    color: var(--light-text);
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.page-header h1 {
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.terms-content-section {
+    padding: 60px 0;
+}
+
+.terms-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 50px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.terms-title {
+    font-size: 3.5rem;
+    color: var(--dark-text);
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.terms-subtitle {
+    font-size: 1.2rem;
+    color: var(--medium-text);
+    margin-bottom: 30px;
+}
+
+.term-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.term-item {
+    display: flex;
+    align-items: center;
+    background: var(--bg-color);
+    padding: 15px 20px;
+    border-radius: 8px;
+    gap: 25px;
+    transition: transform 0.2s ease;
+}
+
+.term-item:hover {
+    transform: translateX(5px);
+}
+
+.term-badge {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    font-family: 'Zuume', sans-serif;
+    font-size: 1.6rem;
+    padding: 10px 20px;
+    border-radius: 6px;
+    min-width: 260px;
+    text-align: center;
+    flex-shrink: 0;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.term-badge.dark {
+    background-color: var(--secondary-accent-color);
+}
+
+.term-text {
+    font-size: 1.1rem;
+    color: var(--dark-text);
+    line-height: 1.5;
+}
+
+/* Fee Grid Section */
+.fee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.fee-card {
+    background: var(--secondary-accent-color);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.fee-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 5px;
+    background-color: var(--accent-color);
+}
+
+.fee-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 15px;
+}
+
+.fee-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+.fee-price {
+    font-family: 'Zuume', sans-serif;
+    font-size: 3.5rem;
+    color: var(--accent-color);
+    line-height: 0.8;
+}
+
+.fee-price span {
+    font-family: 'Circular', sans-serif;
+    font-size: 1.2rem;
+    vertical-align: top;
+}
+
+.fee-desc {
+    font-size: 0.95rem;
+    color: #d1d1d1;
+}
+
+/* Revisions Columns */
+.revision-definitions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+    background: var(--bg-color);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.rev-col h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--dark-text);
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.rev-col ul {
+    list-style: none;
+}
+
+.rev-col ul li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-left: 20px;
+    position: relative;
+}
+
+.rev-col ul li::before {
+    content: '\f0da'; /* FontAwesome Play/Arrow icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* Terms Mobile Responsiveness */
+@media (max-width: 900px) {
+    .fee-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .revision-definitions {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .terms-card {
+        padding: 30px 20px;
+    }
+
+    .term-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 25px 15px;
+    }
+
+    .term-badge {
+        min-width: 100%;
+        font-size: 1.4rem;
+    }
+
+    .terms-title {
+        font-size: 2.8rem;
+        text-align: center;
+    }
+    
+    .terms-subtitle {
+        text-align: center;
+    }
+}
