@@ -19,7 +19,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="pricing.html" class="active">Pricing</a></li>
-                    <li><a href="terms.html" >Terms</a></li>
+                    <li><a href="terms.html">Terms</a></li>
                 </ul>
             </nav>
             <button class="menu-toggle"><i class="fa-solid fa-bars"></i></button>
@@ -27,99 +27,269 @@
     </header>
 
     <main>
-        <section class="pricing-section">
+        <!-- PAGE TITLE BANNER -->
+        <section class="page-title-banner">
             <div class="container">
-                <h2 class="pricing-title">Pricing & Bundles</h2>
-                <p class="pricing-subtitle">Please Note: Source files are not included. Designs are not editable.</p>
+                <h1>Pricing & Bundles</h1>
+                <p>Explore our individual designs and cost-saving packages.</p>
+            </div>
+        </section>
 
-                <!-- INDIVIDUAL DESIGNS SECTION -->
-                <div class="categories-grid">
-                    <div class="category-card">
-                        <h3>Basic Designs</h3>
-                        <div class="category-price">₱200 each</div>
-                        <ul class="category-list">
-                            <li><i class="fa-solid fa-check"></i> Highlights/Featured Cover (9:16 ratio)</li>
-                            <li><i class="fa-solid fa-check"></i> My Day Cover (9:16 ratio)</li>
-                        </ul>
+        <section class="shop-section">
+            <div class="container shop-container">
+                
+                <!-- Sidebar Categories -->
+                <aside class="shop-sidebar">
+                    <h3>Category</h3>
+                    <ul class="category-filter">
+                        <li class="active" data-filter="all"><i class="fa-solid fa-layer-group"></i> All Designs <span class="count">15</span></li>
+                        <li data-filter="basic"><i class="fa-solid fa-star"></i> Basic</li>
+                        <li data-filter="standard"><i class="fa-solid fa-fire"></i> Standard</li>
+                        <li data-filter="premium"><i class="fa-solid fa-crown"></i> Premium</li>
+                        <li data-filter="templates"><i class="fa-solid fa-file-export"></i> Templates / PSD</li>
+                        <li data-filter="bundles"><i class="fa-solid fa-box-open"></i> Bundles</li>
+                    </ul>
+                </aside>
+
+                <!-- Product Grid -->
+                <div class="shop-content">
+                    <div class="shop-header">
+                        <p class="pricing-note"><i class="fa-solid fa-circle-info"></i> Note: Source files are not included unless purchasing a PSD template. Designs are not editable.</p>
                     </div>
 
-                    <div class="category-card">
-                        <h3>Standard Designs</h3>
-                        <div class="category-price">₱300 each</div>
-                        <ul class="category-list">
-                            <li><i class="fa-solid fa-check"></i> AdBanner (Pilot: mascot + rank icons + features)</li>
-                            <li><i class="fa-solid fa-check"></i> AdBanner (Seller: skin for sale with price)</li>
-                            <li><i class="fa-solid fa-check"></i> FB Page Cover (16:9 ratio)</li>
-                            <li><i class="fa-solid fa-check"></i> Legitimacy Cover (Title + Mascot)</li>
-                            <li><i class="fa-solid fa-check"></i> Thank You Design (Pilot service)</li>
-                            <li><i class="fa-solid fa-check"></i> Custom Banners (Minimum P300)</li>
-                        </ul>
+                    <div class="product-grid">
+                        
+                        <!-- BASIC ITEMS -->
+                        <div class="product-card" data-category="basic">
+                            <span class="product-badge">Basic</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/basic-highlights.png" alt="Highlights/Featured Cover">
+                            </div>
+                            <div class="product-info">
+                                <h4>Highlights/Featured Cover</h4>
+                                <p class="product-desc">(9:16 ratio)</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱250</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="basic">
+                            <span class="product-badge">Basic</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/basic-myday.png" alt="My Day Cover">
+                            </div>
+                            <div class="product-info">
+                                <h4>My Day Cover</h4>
+                                <p class="product-desc">(9:16 ratio)</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱250</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STANDARD ITEMS -->
+                        <div class="product-card" data-category="standard">
+                            <span class="product-badge">Standard</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/standard-adbanner-pilot.png" alt="AdBanner Pilot">
+                            </div>
+                            <div class="product-info">
+                                <h4>AdBanner (Pilot)</h4>
+                                <p class="product-desc">Mascot + Rank Icons + Features</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱350</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="standard">
+                            <span class="product-badge">Standard</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/standard-adbanner-seller.png" alt="AdBanner Seller">
+                            </div>
+                            <div class="product-info">
+                                <h4>AdBanner (Seller)</h4>
+                                <p class="product-desc">Skin for sale with price</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱350</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="standard">
+                            <span class="product-badge">Standard</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/standard-fbcover.png" alt="FB Page Cover">
+                            </div>
+                            <div class="product-info">
+                                <h4>FB Page Cover</h4>
+                                <p class="product-desc">(16:9 ratio)</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱350</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="standard">
+                            <span class="product-badge">Standard</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/standard-legitimacy.png" alt="Legitimacy Cover">
+                            </div>
+                            <div class="product-info">
+                                <h4>Legitimacy Cover</h4>
+                                <p class="product-desc">Title + Mascot</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱350</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="standard">
+                            <span class="product-badge">Standard</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/standard-thankyou.png" alt="Thank You Design">
+                            </div>
+                            <div class="product-info">
+                                <h4>Thank You Design</h4>
+                                <p class="product-desc">Pilot Service</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱350</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="standard">
+                            <span class="product-badge">Standard</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/standard-others.png" alt="Other Banners">
+                            </div>
+                            <div class="product-info">
+                                <h4>Other Standards</h4>
+                                <p class="product-desc">Misc Standard Banner Needs</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱350</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PREMIUM ITEMS -->
+                        <div class="product-card" data-category="premium">
+                            <span class="product-badge">Premium</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/premium-pricelist-pilot.png" alt="Pricelist Pilot">
+                            </div>
+                            <div class="product-info">
+                                <h4>Pricelist (Pilot)</h4>
+                                <p class="product-desc">Rank Icons + Prices</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱450</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="premium">
+                            <span class="product-badge">Premium</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/premium-pricelist-seller.png" alt="Pricelist Seller">
+                            </div>
+                            <div class="product-info">
+                                <h4>Pricelist (Seller)</h4>
+                                <p class="product-desc">DGC</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱450</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="premium">
+                            <span class="product-badge">Premium</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/premium-screenshot-showcase.png" alt="Screenshot Showcase">
+                            </div>
+                            <div class="product-info">
+                                <h4>Rank Screenshot Showcase</h4>
+                                <p class="product-desc">Phone Mockup</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱450</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TEMPLATES & PSD -->
+                        <div class="product-card" data-category="templates">
+                            <span class="product-badge">Canva</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/template-canva.png" alt="Canva Template">
+                            </div>
+                            <div class="product-info">
+                                <h4>Templated Banner</h4>
+                                <p class="product-desc">Editable in Canva</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱500</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="templates">
+                            <span class="product-badge">PSD</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/template-psd.png" alt="PSD File">
+                            </div>
+                            <div class="product-info">
+                                <h4>PSD File</h4>
+                                <p class="product-desc">Data Retention Policy</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱750</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BUNDLES -->
+                        <div class="product-card" data-category="bundles">
+                            <span class="product-badge bundle-badge">Bundle</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/bundle-basic.png" alt="Basic Bundle">
+                            </div>
+                            <div class="product-info">
+                                <h4>Basic Bundle</h4>
+                                <p class="product-desc">2x Standard, 1x Basic Design</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱600</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-category="bundles">
+                            <span class="product-badge bundle-badge">Bundle</span>
+                            <div class="product-img-wrapper">
+                                <img src="resources/images/bundle-standard.png" alt="Standard Bundle">
+                            </div>
+                            <div class="product-info">
+                                <h4>Standard Bundle</h4>
+                                <p class="product-desc">2x Standard, 1x Premium Design</p>
+                                <div class="product-bottom">
+                                    <span class="product-price">₱1000</span>
+                                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn-small">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-
-                    <div class="category-card">
-                        <h3>Premium Designs</h3>
-                        <div class="category-price">₱400 each</div>
-                        <ul class="category-list">
-                            <li><i class="fa-solid fa-check"></i> Pricelist (Pilot: rank icons + prices)</li>
-                            <li><i class="fa-solid fa-check"></i> Pricelist (Seller: DGC)</li>
-                            <li><i class="fa-solid fa-check"></i> Stars/Rank Screenshot Showcase (Phone Mockup)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h2 class="pricing-title">Pilot Bundles</h2>
-                <p class="pricing-subtitle">Save more by getting our curated design packages.</p>
-
-                <!-- BUNDLES SECTION -->
-                <div class="bundles-grid">
-                    
-                    <!-- Basic Bundle -->
-                    <div class="bundle-card">
-                        <h3>Basic Pilot</h3>
-                        <p class="bundle-desc">Essential starter pack for new pilot services.</p>
-                        <div class="bundle-price">₱500</div>
-                        <div class="savings">Saves ₱300</div>
-                        <ul class="bundle-features">
-                            <li><i class="fa-solid fa-cube"></i> 2x Standard Designs</li>
-                            <li><i class="fa-solid fa-cube"></i> 1x Basic Design</li>
-                        </ul>
-                        <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn bundle-btn">Get Bundle</a>
-                    </div>
-
-                    <!-- Standard Bundle (POPULAR) -->
-                    <div class="bundle-card popular">
-                        <div class="popular-badge">Most Popular</div>
-                        <h3 style="color: white;">Standard Pilot</h3>
-                        <p class="bundle-desc">The perfect middle-ground choice for growing pages.</p>
-                        <div class="bundle-price" style="color: white;">₱900</div>
-                        <div class="savings">Saves ₱100</div>
-                        <ul class="bundle-features">
-                            <li><i class="fa-solid fa-cube" style="color: var(--accent-color);"></i> <span style="color: white;">2x Standard Designs</span></li>
-                            <li><i class="fa-solid fa-cube" style="color: var(--accent-color);"></i> <span style="color: white;">1x Premium Design</span></li>
-                        </ul>
-                        <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn bundle-btn">Get Bundle</a>
-                    </div>
-
-                    <!-- Pro Bundle -->
-                    <div class="bundle-card">
-                        <h3>PRO Pilot</h3>
-                        <p class="bundle-desc">For maximized visual results and high return on investment.</p>
-                        <div class="bundle-price">₱1400</div>
-                        <div class="savings">Saves over ₱700+</div>
-                        <ul class="bundle-features">
-                            <li><i class="fa-solid fa-cube"></i> 1x Pilot AdBanner (Animated)</li>
-                            <li><i class="fa-solid fa-cube"></i> 2x Premium Designs</li>
-                            <li><i class="fa-solid fa-cube"></i> 2x Standard Designs</li>
-                            <li><i class="fa-solid fa-cube"></i> 1x Basic Design</li>
-                        </ul>
-                        <a href="https://facebook.com/marklawrence.artistry30" target="_blank" class="btn bundle-btn">Get Bundle</a>
-                    </div>
-
-                </div>
-
-                <div class="other-info">
-                    <p>Have custom requirements not listed here? <br>
-                    <a href="https://facebook.com/marklawrence.artistry30" target="_blank">Contact us on Facebook</a> for a tailored quote!</p>
                 </div>
 
             </div>

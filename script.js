@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- 2. Image Lightbox (Zoom) for Portfolio AND Pricing ---
+    // Select images in both the portfolio items and the shop items
+    const zoomableImages = document.querySelectorAll('.portfolio-item img, .product-img-wrapper img');
 
-    // --- 2. Portfolio Image Lightbox (Zoom) ---
-    const portfolioImages = document.querySelectorAll('.portfolio-item img');
-
-    if (portfolioImages.length > 0) {
+    if (zoomableImages.length > 0) {
         // Create the overlay elements dynamically
         const overlay = document.createElement('div');
         overlay.classList.add('lightbox-overlay');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(overlay);
 
         // Open Lightbox when an image is clicked
-        portfolioImages.forEach(img => {
+        zoomableImages.forEach(img => {
             img.addEventListener('click', (e) => {
                 lightboxImg.src = e.target.src; // Get the clicked image source
                 overlay.classList.add('active'); // Show overlay
@@ -50,6 +50,34 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 lightboxImg.src = ''; 
             }, 300);
+        });
+    }
+
+    // --- 3. Shop Category Filtering (Pricing Page) ---
+    const filterBtns = document.querySelectorAll('.category-filter li');
+    const productCards = document.querySelectorAll('.product-card');
+
+    if (filterBtns.length > 0 && productCards.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                // Get category to filter
+                const filterValue = btn.getAttribute('data-filter');
+
+                productCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || filterValue === cardCategory) {
+                        card.classList.remove('hidden'); // Show card
+                    } else {
+                        card.classList.add('hidden'); // Hide card
+                    }
+                });
+            });
         });
     }
 });
